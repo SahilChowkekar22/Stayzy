@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>HOTEL_API_KEY</key>
+       <string>525d70eaa28afaec4d00d20bb98f11a7</string>
+
+       <key>HOTEL_SECRET</key>
+       <string>0e4f9030d0</string>
+</dict>
+</plist>

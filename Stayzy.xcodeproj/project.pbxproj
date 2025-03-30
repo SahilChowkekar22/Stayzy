@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5A00467B2D98318F003151B1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A00467A2D98318F003151B1 /* FirebaseAuth */; };
+		5A00467D2D98318F003151B1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5A00467C2D98318F003151B1 /* FirebaseFirestore */; };
+		5AD5948D2D998D79008FFC61 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD5948C2D998D79008FFC61 /* ViewInspector */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5A7477462D8DB18D009B5D5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,14 +35,37 @@
 		5A74774F2D8DB18D009B5D5C /* StayzyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayzyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5A0047002D98A0E1003151B1 /* Exceptions for "Stayzy" folder in "Stayzy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5A7477342D8DB18B009B5D5C /* Stayzy */;
+		};
+		5AD594BA2D99CB77008FFC61 /* Exceptions for "StayzyTests" folder in "Stayzy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ViewsTests/HotelsTests/FullDescriptionModalViewTests.swift,
+			);
+			target = 5A7477342D8DB18B009B5D5C /* Stayzy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5A7477372D8DB18B009B5D5C /* Stayzy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5A0047002D98A0E1003151B1 /* Exceptions for "Stayzy" folder in "Stayzy" target */,
+			);
 			path = Stayzy;
 			sourceTree = "<group>";
 		};
 		5A7477482D8DB18D009B5D5C /* StayzyTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5AD594BA2D99CB77008FFC61 /* Exceptions for "StayzyTests" folder in "Stayzy" target */,
+			);
 			path = StayzyTests;
 			sourceTree = "<group>";
 		};
@@ -52,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A00467B2D98318F003151B1 /* FirebaseAuth in Frameworks */,
+				5A00467D2D98318F003151B1 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD5948D2D998D79008FFC61 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +144,8 @@
 			);
 			name = Stayzy;
 			packageProductDependencies = (
+				5A00467A2D98318F003151B1 /* FirebaseAuth */,
+				5A00467C2D98318F003151B1 /* FirebaseFirestore */,
 			);
 			productName = Stayzy;
 			productReference = 5A7477352D8DB18B009B5D5C /* Stayzy.app */;
@@ -135,6 +169,7 @@
 			);
 			name = StayzyTests;
 			packageProductDependencies = (
+				5AD5948C2D998D79008FFC61 /* ViewInspector */,
 			);
 			productName = StayzyTests;
 			productReference = 5A7477452D8DB18D009B5D5C /* StayzyTests.xctest */;
@@ -195,6 +230,10 @@
 			);
 			mainGroup = 5A74772C2D8DB18B009B5D5C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5A0046792D98318F003151B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5AD5948B2D998D79008FFC61 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5A7477362D8DB18B009B5D5C /* Products */;
 			projectDirPath = "";
@@ -398,6 +437,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Stayzy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stayzy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +466,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Stayzy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stayzy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +593,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A0046792D98318F003151B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+		5AD5948B2D998D79008FFC61 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A00467A2D98318F003151B1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A0046792D98318F003151B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5A00467C2D98318F003151B1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A0046792D98318F003151B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5AD5948C2D998D79008FFC61 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AD5948B2D998D79008FFC61 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A74772D2D8DB18B009B5D5C /* Project object */;
 }
