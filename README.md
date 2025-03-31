@@ -112,26 +112,26 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 ## 🔐 Authentication Flow
 <table style="border: none;">
 <tr>
-<td style="border: none;">
-**Welcome Screen**  
-_App introduction and login options_  
+<td style="border: none; text-align: center;">
+<h3>Welcome Screen</h3>
+<p><em>App introduction and login options</em></p>
 <img src="Stayzy/Images/FirstScreen.png" width="200" height="400" alt="Welcome Screen">
 </td>
-<td style="border: none;">
-**Sign In Screen**  
-_Email/Password login with social options_  
+<td style="border: none; text-align: center;">
+<h3>Sign In Screen</h3>
+<p><em>Email/Password login with social options</em></p>
 <img src="Stayzy/Images/Login.png" width="200" height="400" alt="Sign In">
 </td>
 </tr>
 <tr>
-<td style="border: none;">
-**Sign Up Screen**  
-_New user registration with validation_  
+<td style="border: none; text-align: center;">
+<h3>Sign Up Screen</h3>
+<p><em>New user registration with validation</em></p>
 <img src="Stayzy/Images/SignUp.png" width="200" height="400" alt="Sign Up">
 </td>
-<td style="border: none;">
-**Profile Information**  
-_Edit personal details_  
+<td style="border: none; text-align: center;">
+<h3>Profile Information</h3>
+<p><em>Edit personal details</em></p>
 <img src="Stayzy/Images/ProfileInfo.png" width="200" height="400" alt="Profile Info">
 </td>
 </tr>
@@ -142,21 +142,21 @@ _Edit personal details_
 ## ✨ Main Features
 <table style="border: none;">
 <tr>
-<td style="border: none;">
-**Explore Screen**  
-_Browse hotels with filters and search_  
+<td style="border: none; text-align: center;">
+<h3>Explore Screen</h3>
+<p><em>Browse hotels with filters and search</em></p>
 <img src="Stayzy/Images/Explore.png" width="200" height="400" alt="Explore">
 </td>
-<td style="border: none;">
-**Hotel Details**  
-_Comprehensive hotel information_  
+<td style="border: none; text-align: center;">
+<h3>Hotel Details</h3>
+<p><em>Comprehensive hotel information</em></p>
 <img src="Stayzy/Images/HotelDetail.png" width="200" height="400" alt="Hotel Details">
 </td>
 </tr>
 <tr>
-<td style="border: none;">
-**Hotel Description**  
-_Detailed amenities and facilities_  
+<td style="border: none; text-align: center;">
+<h3>Hotel Description</h3>
+<p><em>Detailed amenities and facilities</em></p>
 <img src="Stayzy/Images/HotelDescription.png" width="200" height="400" alt="Hotel Description">
 </td>
 </tr>
@@ -167,14 +167,14 @@ _Detailed amenities and facilities_
 ## 🗺️ Maps & Location
 <table style="border: none;">
 <tr>
-<td style="border: none;">
-**Map View**  
-_Interactive hotel location map_  
+<td style="border: none; text-align: center;">
+<h3>Map View</h3>
+<p><em>Interactive hotel location map</em></p>
 <img src="Stayzy/Images/Map.png" width="200" height="400" alt="Map View">
 </td>
-<td style="border: none;">
-**Full Map View**  
-_Expanded map with all nearby hotels_  
+<td style="border: none; text-align: center;">
+<h3>Full Map View</h3>
+<p><em>Expanded map with all nearby hotels</em></p>
 <img src="Stayzy/Images/FullMap.png" width="200" height="400" alt="Full Map">
 </td>
 </tr>
@@ -185,26 +185,26 @@ _Expanded map with all nearby hotels_
 ## 👤 User Profile & Trips
 <table style="border: none;">
 <tr>
-<td style="border: none;">
-**Profile Screen**  
-_User profile and settings_  
+<td style="border: none; text-align: center;">
+<h3>Profile Screen</h3>
+<p><em>User profile and settings</em></p>
 <img src="Stayzy/Images/profile.png" width="200" height="400" alt="Profile">
 </td>
-<td style="border: none;">
-**Trips Screen**  
-_View and manage bookings_  
+<td style="border: none; text-align: center;">
+<h3>Trips Screen</h3>
+<p><em>View and manage bookings</em></p>
 <img src="Stayzy/Images/Trips.png" width="200" height="400" alt="Trips">
 </td>
 </tr>
 <tr>
-<td style="border: none;">
-**Wishlists**  
-_Saved hotels and favorites_  
+<td style="border: none; text-align: center;">
+<h3>Wishlists</h3>
+<p><em>Saved hotels and favorites</em></p>
 <img src="Stayzy/Images/Wishlists.png" width="200" height="400" alt="Wishlists">
 </td>
-<td style="border: none;">
-**Messages**  
-_Booking notifications and support_  
+<td style="border: none; text-align: center;">
+<h3>Messages</h3>
+<p><em>Booking notifications and support</em></p>
 <img src="Stayzy/Images/Messages.png" width="200" height="400" alt="Messages">
 </td>
 </tr>
