@@ -109,7 +109,20 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 
 ## 📱 Screenshots
 
-[Add your app screenshots here]
+### Authentication Flow
+![Sign In](Stayzy/Assets.xcassets/Images/SignIn.imageset/SignIn.png)
+![Sign Up](Stayzy/Assets.xcassets/Images/SignUp.imageset/SignUp.png)
+![First Screen](Stayzy/Assets.xcassets/Images/FirstScreen.imageset/FirstScreen.png)
+
+### Main Features
+![Home Screen](Stayzy/Assets.xcassets/Images/HomeScreen.imageset/HomeScreen.png)
+![Hotel Details](Stayzy/Assets.xcassets/Images/HotelDetails.imageset/HotelDetails.png)
+![Booking Screen](Stayzy/Assets.xcassets/Images/BookingScreen.imageset/BookingScreen.png)
+
+### User Profile & Trips
+![Profile](Stayzy/Assets.xcassets/Images/Profile.imageset/Profile.png)
+![Trips](Stayzy/Assets.xcassets/Images/Trips.imageset/Trips.png)
+![Trip Details](Stayzy/Assets.xcassets/Images/TripDetails.imageset/TripDetails.png)
 
 ## 🔧 Installation
 
