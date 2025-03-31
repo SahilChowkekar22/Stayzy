@@ -26,6 +26,8 @@ final class NetworkServiceTests: XCTestCase {
         let message: String
     }
 
+    // Success Case
+
     func test_fetchData_successfullyReturnsDecodedObject() async throws {
         // Given
         let mockObject = MockResponse(message: "Hello, Sahil!")
@@ -40,6 +42,7 @@ final class NetworkServiceTests: XCTestCase {
         XCTAssertEqual(result, mockObject)
     }
 
+    // Request Failure Simulation
     func test_fetchData_failsWithRequestFailedError() async {
         // Given
         mockService.shouldFail = true
@@ -55,6 +58,7 @@ final class NetworkServiceTests: XCTestCase {
         }
     }
 
+    // Server Error Simulation (e.g. 500)
     func test_fetchData_failsWithServerError() async {
         // Given
         mockService.statusCode = 500
@@ -70,9 +74,10 @@ final class NetworkServiceTests: XCTestCase {
         }
     }
 
+    // Decoding Failure Simulation
     func test_fetchData_failsWithDecodingError() async {
         // Given
-        // 🧨 Invalid JSON for MockResponse
+        // Invalid JSON for MockResponse
         mockService.mockData = """
         { "unexpected": "value" }
         """.data(using: .utf8)
@@ -89,6 +94,7 @@ final class NetworkServiceTests: XCTestCase {
         }
     }
 
+    // No Data Provided
     func test_fetchData_failsWithNoData() async {
         // Given
         mockService.mockData = nil

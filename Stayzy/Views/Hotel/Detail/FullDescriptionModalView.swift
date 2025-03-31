@@ -7,24 +7,31 @@
 
 import SwiftUI
 
+// A modal view that shows a scrollable detailed description of the hotel,
+// along with any additional notes (e.g. linens, electricity fees, etc).
 struct FullDescriptionModalView: View {
     let description: String?
 
+    // Environment property to dismiss the modal view
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
+                    
+                    // Section Title
                     Text("About this space")
                         .font(.title2)
                         .fontWeight(.bold)
 
+                    // Main Description Content
                     if let description = description {
                         Text(description)
                             .multilineTextAlignment(.leading)
                             .foregroundColor(.primary)
                     } else {
+                        // Fallback if no description was passed in
                         Text("No description available.")
                             .italic()
                             .foregroundColor(.gray)
@@ -33,6 +40,7 @@ struct FullDescriptionModalView: View {
                     // Spacer between sections
                     Spacer(minLength: 10)
 
+                    // Additional Notes Section
                     Text("Other things to note")
                         .font(.headline)
                         .fontWeight(.semibold)
@@ -43,6 +51,7 @@ struct FullDescriptionModalView: View {
                 }
                 .padding()
             }
+            // Navigation Bar Setup
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

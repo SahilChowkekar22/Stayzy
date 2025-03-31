@@ -14,16 +14,19 @@ final class HotelViewModelTests: XCTestCase {
     var viewModel: HotelViewModel!
     var mockRepository: MockHotelRepository!
 
+    // Setup
     override func setUp() {
         mockRepository = MockHotelRepository()
         viewModel = HotelViewModel(repository: mockRepository)
     }
 
+    // Teardown
     override func tearDown() {
         viewModel = nil
         mockRepository = nil
     }
 
+    // Test: Successful loadHotels call
     func test_loadHotels_success_setsHotelsAndSuccessState() async {
         // Given
         mockRepository.mockHotels = [.mock, .mock]
@@ -36,6 +39,7 @@ final class HotelViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.state, .success)
     }
 
+    // Test: Failed loadHotels call sets failure state
     func test_loadHotels_failure_setsFailureState() async {
         // Given
         mockRepository.shouldFail = true
@@ -51,21 +55,8 @@ final class HotelViewModelTests: XCTestCase {
         }
     }
 
-//    func test_filteredHotels_returnsMatchingResults() async {
-//        // Given
-//        mockRepository.mockHotels = [
-//            .mock.name("Ocean Paradise"),
-//            .mock.city("New York"),
-//            .mock.state("California")
-//        ]
-//        await viewModel.loadHotels()
-//        viewModel.searchText = "New"
-//
-//        // Then
-//        XCTAssertEqual(viewModel.filteredHotels.count, 1)
-//        XCTAssertEqual(viewModel.filteredHotels.first?.city?.content, "New York")
-//    }
 
+    // Test: Display info caching for price/rating/reviews
     func test_displayInfo_cachesPriceRatingReview() {
         // Given
         let hotel = HotelElement.mock
@@ -80,6 +71,7 @@ final class HotelViewModelTests: XCTestCase {
         XCTAssertEqual(firstCall.reviewCount, secondCall.reviewCount)
     }
 
+    // Test: Successful fetch of hotel details
     func test_loadHotelDetails_success_setsDetailAndState() async {
         // Given
         mockRepository.mockHotelDetail = .mock
@@ -92,6 +84,7 @@ final class HotelViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.state, .success)
     }
 
+    // Test: Failure in fetching hotel details sets .failure state
     func test_loadHotelDetails_failure_setsFailureState() async {
         // Given
         mockRepository.shouldFail = true

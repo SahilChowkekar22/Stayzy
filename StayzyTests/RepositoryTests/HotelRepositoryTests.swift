@@ -10,16 +10,20 @@ import XCTest
 
 final class HotelRepositoryTests: XCTestCase {
 
+    // Mock repository conforming to HotelRepositoryProtocol/
     var mockRepository: MockHotelRepository!
 
+    // Setup before each test
     override func setUpWithError() throws {
         mockRepository = MockHotelRepository()
     }
 
+    // Cleanup after each test
     override func tearDownWithError() throws {
         mockRepository = nil
     }
 
+    // Test: fetchHotelList throws an error when shouldFail is true
     func test_fetchHotelList_returnsMockData() async throws {
         // Given
         mockRepository.mockHotels = [.mock]
@@ -32,6 +36,7 @@ final class HotelRepositoryTests: XCTestCase {
         XCTAssertEqual(result.first?.name?.content, "Mock Hotel")
     }
 
+    // Test: fetchHotelList throws an error when shouldFail is true
     func test_fetchHotelList_throwsErrorWhenShouldFailIsTrue() async {
         // Given
         mockRepository.shouldFail = true
@@ -44,6 +49,7 @@ final class HotelRepositoryTests: XCTestCase {
         }
     }
 
+    // Test: Fetch hotel detail successfully returns mock data
     func test_fetchHotelDetail_returnsMockData() async throws {
         // Given
         let mockCode = 999
@@ -56,6 +62,7 @@ final class HotelRepositoryTests: XCTestCase {
         XCTAssertEqual(detail.city?.content, "Mock City")
     }
 
+    // Test: fetchHotelDetail throws an error when shouldFail is true
     func test_fetchHotelDetail_throwsErrorWhenShouldFailIsTrue() async {
         // Given
         mockRepository.shouldFail = true

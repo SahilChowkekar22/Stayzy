@@ -7,13 +7,20 @@
 
 import SwiftUI
 
+// View displaying the user's favorited (wishlisted) hotels.
 struct WishlistsView: View {
-    @StateObject private var wishlistManager = WishlistManager.shared
+    @StateObject private var wishlistWrapper: WishlistWrapper
+
+        init(repository: any WishlistProtocol = WishlistManager.shared) {
+            _wishlistWrapper = StateObject(wrappedValue: WishlistWrapper(repository: repository))
+        }
+
 
     var body: some View {
         NavigationView {
             Group {
-                if wishlistManager.wishlistedHotels.isEmpty {
+                // Show either the empty state or the list of hotels
+                if wishlistWrapper.wishlistedHotels.isEmpty {
                     emptyStateView
                 } else {
                     wishlistListView
@@ -21,17 +28,19 @@ struct WishlistsView: View {
             }
             .navigationTitle("Wishlists")
             .toolbar {
-                if !wishlistManager.wishlistedHotels.isEmpty {
+                // Show Edit button only if list has content
+                if !wishlistWrapper.wishlistedHotels.isEmpty {
                     EditButton()
                 }
             }
         }
         .onAppear {
-            wishlistManager.fetchFavorites()
+            // Load favorites from persistence (e.g., Core Data)
+            wishlistWrapper.fetchFavorites()
         }
     }
 
-    // MARK: - Empty State View
+    // Empty State View
     private var emptyStateView: some View {
         VStack(spacing: 16) {
             Image(systemName: "heart.slash.fill")
@@ -45,33 +54,34 @@ struct WishlistsView: View {
         .padding()
     }
 
-    // MARK: - Wishlist List View
+    // List of Wishlisted Hotels
     private var wishlistListView: some View {
         List {
-            ForEach(wishlistManager.wishlistedHotels, id: \.self) { hotel in
+            ForEach(wishlistWrapper.wishlistedHotels, id: \.self) { hotel in
                 WishlistRow(hotel: hotel)
             }
             .onDelete(perform: deleteHotel)
         }
     }
 
-    // MARK: - Deletion Logic
+    // Deletion Logic
     private func deleteHotel(at offsets: IndexSet) {
         for index in offsets {
-            let hotel = wishlistManager.wishlistedHotels[index]
-            wishlistManager.removeByFavorite(hotel)
+            let hotel = wishlistWrapper.wishlistedHotels[index]
+            wishlistWrapper.removeByFavorite(hotel)
         }
-        wishlistManager.fetchFavorites()
+        wishlistWrapper.fetchFavorites()
     }
 }
 
-// MARK: - Wishlist Row View
+// Wishlist Row View
 struct WishlistRow: View {
-    let hotel: FavoriteHotel
+    let hotel: FavoriteHotel // Your Core Data model or struct
 
     var body: some View {
         HStack(spacing: 12) {
             if let path = hotel.imageURL {
+                // Async Image with placeholder
                 AsyncImage(url: APIEndpoint.imageURL(for: path)) { image in
                     image
                         .resizable()
@@ -83,6 +93,7 @@ struct WishlistRow: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
 
+            // Hotel Info
             VStack(alignment: .leading, spacing: 4) {
                 Text(hotel.name ?? "Unknown Hotel")
                     .font(.headline)
@@ -102,6 +113,6 @@ struct WishlistRow: View {
     }
 }
 
-#Preview {
-    WishlistsView()
-}
+//#Preview {
+//    WishlistsView(repository: MockWishlistManager())
+//}

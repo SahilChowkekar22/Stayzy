@@ -21,12 +21,12 @@ struct WelcomeView: View {
 
     var body: some View {
         ZStack {
-            Color("RedColor") // 🔴 Background Color
+            Color("RedColor") // Background Color
                 .ignoresSafeArea()
 
             VStack(spacing: 20) {
-                // Stayzy Logo or Lottie animation here
-                Image("Stayzy1") // Replace with your real logo or animation
+                
+                Image("Stayzy1")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 300)
@@ -70,7 +70,7 @@ struct WelcomeView: View {
                 Spacer()
             }
 
-            // 🔵 Skip Button
+            // Skip Button
             VStack {
                 HStack {
                     Spacer()

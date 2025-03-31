@@ -7,28 +7,30 @@
 
 import SwiftUI
 
+// Displays the user's booked trips (or an empty state if none are booked).
 struct TripsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 32) {
-                headerSection
+                headerSection  // Title + Empty Trips Info + CTA
                 Divider()
-                supportSection
+                supportSection // Help Center Link
             }
             .padding()
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
 
-    // MARK: - Header Section
+    // Header Section with Empty State
     private var headerSection: some View {
         VStack(alignment: .leading, spacing: 16) {
+            // Title
             Text("Trips")
                 .font(.largeTitle)
                 .fontWeight(.bold)
 
             Divider()
-
+            // Empty state message + action
             VStack(alignment: .leading, spacing: 12) {
                 Text("No trips booked...yet!")
                     .font(.title3)
@@ -37,7 +39,8 @@ struct TripsView: View {
                 Text("Time to dust off your bags and start planning your next adventure.")
                     .font(.body)
                     .foregroundColor(.gray)
-
+                
+                // CTA to take user to explore screen
                 Button(action: {
                     // TODO: Implement navigation to Explore tab or search
                 }) {
@@ -56,7 +59,7 @@ struct TripsView: View {
         }
     }
 
-    // MARK: - Support Section
+    // Support Section with Inline Styled Text
     private var supportSection: some View {
         Group {
             Text("Can’t find your reservation here? ")

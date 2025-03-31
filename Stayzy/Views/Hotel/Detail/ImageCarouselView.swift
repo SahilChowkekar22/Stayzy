@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// A swipeable image carousel using SwiftUI’s `TabView` and `AsyncImage` for remote loading.
 struct ImageCarouselView: View {
     let imagePaths: [String]
 

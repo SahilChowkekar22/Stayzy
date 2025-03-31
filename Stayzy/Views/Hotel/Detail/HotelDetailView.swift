@@ -8,12 +8,14 @@
 import SwiftUI
 import MapKit
 
+// Full-screen detail view for a selected hotel, including carousel, features, map, and booking.
 struct HotelDetailView: View {
     let hotel: HotelElement
     let priceForStay: String
     let rating: String
     let reviewCount: Int
 
+    //State & Environment
     @State private var showFullDescriptionSheet = false
     @Environment(\.dismiss) private var dismiss
 
@@ -39,6 +41,7 @@ struct HotelDetailView: View {
 
     // MARK: - Subviews
 
+    // Image Carousel Section
     private var imageCarousel: some View {
         if let images = hotel.images {
             let paths = images.compactMap { $0.path }
@@ -56,6 +59,7 @@ struct HotelDetailView: View {
         )
     }
 
+    //Hotel Header Section (Title, Rating, Address)
     private var hotelHeader: some View {
         Group {
             VStack(alignment: .leading, spacing: 10) {
@@ -82,6 +86,7 @@ struct HotelDetailView: View {
     }
 
 
+    // Description Section with Modal Expansion
     private var hostInfo: some View {
         VStack {
             HStack {
@@ -101,6 +106,7 @@ struct HotelDetailView: View {
         .padding(.horizontal)
     }
 
+    // Feature Icons (Static for now)
     private var featureIcons: some View {
         Group {
             VStack(alignment: .leading, spacing: 24) {
@@ -123,6 +129,7 @@ struct HotelDetailView: View {
     }
 
 
+    // Individual Feature Item View
     private func featureItem(icon: String, title: String, subtitle: String) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: icon)
@@ -138,6 +145,7 @@ struct HotelDetailView: View {
         }
     }
 
+    // Description Section with Modal Expansion
     private var descriptionSection: some View {
         Group {
             VStack(alignment: .leading, spacing: 16) {
@@ -169,6 +177,7 @@ struct HotelDetailView: View {
     }
 
 
+    // Embedded Map Section
     private var locationMap: some View {
         if let lat = hotel.coordinates?.latitude,
            let lon = hotel.coordinates?.longitude {
@@ -184,6 +193,7 @@ struct HotelDetailView: View {
         }
     }
 
+    // Bottom Sticky Booking Bar
     private var bottomBookingBar: some View {
         VStack {
             Spacer()
@@ -216,6 +226,7 @@ struct HotelDetailView: View {
         }
     }
 
+    // Custom Back Button (top-left corner)
     private var backButton: some View {
         Button {
             dismiss()

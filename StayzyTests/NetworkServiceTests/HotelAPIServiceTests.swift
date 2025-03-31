@@ -8,8 +8,11 @@ final class HotelAPIServiceTests: XCTestCase {
     var mockNetwork: MockNetworkService!
     var service: HotelAPIService!
 
+    // Setup before each test
     override func setUp() {
         super.setUp()
+        
+        // GIVEN: Mock network + test service
         mockNetwork = MockNetworkService()
         service = HotelAPIService(
             apiKey: "test-key",
@@ -18,32 +21,22 @@ final class HotelAPIServiceTests: XCTestCase {
         )
     }
 
+    // Cleanup after each test
     override func tearDown() {
         mockNetwork = nil
         service = nil
         super.tearDown()
     }
 
-//    func test_fetchHotelList_success() async throws {
-//        // GIVEN
-//        let mockHotels = [HotelElement.mock, HotelElement.mock]
-//        let response = HotelListResponse(hotels: mockHotels)
-//
-//        mockNetwork.mockData = try JSONEncoder().encode(response)
-//
-//        // WHEN
-//        let hotels = try await service.fetchHotelList()
-//
-//        // THEN
-//        XCTAssertEqual(hotels.count, 2)
-//    }
 
-
+    // Test: fetchHotelList fails when shouldFail is true
     func test_fetchHotelList_failure() async throws {
         // GIVEN
         mockNetwork.shouldFail = true
 
+        // WHEN: fetchHotelList is called
         do {
+            // THEN: It should throw an error (this shouldn't be reached)
             _ = try await service.fetchHotelList()
             XCTFail("Expected to throw, but succeeded")
         } catch {
@@ -51,12 +44,15 @@ final class HotelAPIServiceTests: XCTestCase {
         }
     }
 
+    // Test: fetchHotelDetail fails when shouldFail is true
     func test_fetchHotelDetail_failure() async throws {
-        // GIVEN
+        // GIVEN: A mock network that fails
         mockNetwork.shouldFail = true
 
+        // WHEN: fetchHotelDetail is called
         do {
             _ = try await service.fetchHotelDetail(hotelCode: 999)
+            // THEN: It should throw an error
             XCTFail("Expected to throw, but succeeded")
         } catch {
             XCTAssertTrue(error is NetworkError)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// A simple reusable marker icon to show on the map for a hotel or a location
 struct MapMarkerView: View {
     var body: some View {
         Image(systemName: "checkmark.seal.fill")

@@ -7,9 +7,12 @@
 
 import SwiftUI
 
+// Displays a hotel's description with expandable "Show more / Show less" functionality
 struct HotelDescriptionView: View {
+    // Optional description passed from hotel detail
     let description: String?
     
+    // Controls whether full text is shown or truncated
     @State private var showFullDescription = false
 
     var body: some View {
@@ -21,6 +24,7 @@ struct HotelDescriptionView: View {
                     .lineLimit(showFullDescription ? nil : 3)
                     .fixedSize(horizontal: false, vertical: true)
 
+                // Expand/collapse button
                 Button(action: {
                     showFullDescription.toggle()
                 }) {
@@ -35,6 +39,7 @@ struct HotelDescriptionView: View {
                 }
                 .padding(.top, 4)
             } else {
+                // Fallback if no description is available
                 Text("No Description")
                     .foregroundColor(.gray)
             }

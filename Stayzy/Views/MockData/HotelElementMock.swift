@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Extension on `HotelElement` to provide mock data for previews and testing.
 extension HotelElement {
     static let mock: HotelElement = HotelElement(
         s2C: "4⭐️",

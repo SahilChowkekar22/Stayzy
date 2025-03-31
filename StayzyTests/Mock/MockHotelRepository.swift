@@ -8,6 +8,7 @@
 import Foundation
 @testable import Stayzy
 
+// A mock implementation of `HotelRepositoryProtocol` used for unit testing and previews.
 class MockHotelRepository: HotelRepositoryProtocol {
     var mockHotels: [HotelElement] = []
     var mockHotelDetail: HotelDetail = .mock

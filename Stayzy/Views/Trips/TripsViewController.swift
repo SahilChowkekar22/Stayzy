@@ -7,21 +7,25 @@
 
 import UIKit
 
+// UIKit version of the Trips screen, used via `TripsUIKitWrapper` in SwiftUI.
 class TripsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .white // Background color for full view
 
+        // Title Label
         let titleLabel = UILabel()
         titleLabel.text = "Trips"
         titleLabel.font = .boldSystemFont(ofSize: 34)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
+        // Subtitle
         let subtitleLabel = UILabel()
         subtitleLabel.text = "No trips booked...yet!"
         subtitleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
 
+        // Description Text
         let descLabel = UILabel()
         descLabel.text = "Time to dust off your bags and start planning your next adventure."
         descLabel.textColor = .gray
@@ -29,6 +33,7 @@ class TripsViewController: UIViewController {
         descLabel.numberOfLines = 0
         descLabel.translatesAutoresizingMaskIntoConstraints = false
 
+        // Start Searching Button
         let button = UIButton(type: .system)
         button.setTitle("Start searching", for: .normal)
         button.layer.borderColor = UIColor.black.cgColor
@@ -37,6 +42,7 @@ class TripsViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
 
+        // Help Center Link
         let helpLabel = UILabel()
         let attributed = NSMutableAttributedString(
             string: "Can’t find your reservation here? ",
@@ -52,6 +58,7 @@ class TripsViewController: UIViewController {
         helpLabel.numberOfLines = 0
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
 
+        // Stack Layout
         let stack = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel, descLabel, button, helpLabel])
         stack.axis = .vertical
         stack.spacing = 16
@@ -60,6 +67,7 @@ class TripsViewController: UIViewController {
 
         view.addSubview(stack)
 
+        // Constraints
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             stack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),

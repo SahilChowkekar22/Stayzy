@@ -1,7 +1,9 @@
 // SearchBar.swift
 import SwiftUI
 
+// A reusable search bar component with rounded corners and SF Symbol
 struct SearchBar: View {
+    // Two-way binding for search text input
     @Binding var text: String
     @FocusState private var isFocused: Bool
 
@@ -12,6 +14,7 @@ struct SearchBar: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
 
+            // Search input field
             TextField(placeholder, text: $text)
                 .focused($isFocused)
                 .foregroundColor(.primary)
@@ -33,6 +36,7 @@ struct SearchBar: View {
     SearchBarPreview()
 }
 
+// A container to preview the SearchBar with testable state
 struct SearchBarPreview: View {
     @State private var searchText = ""
 

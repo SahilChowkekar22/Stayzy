@@ -15,10 +15,11 @@
 import SwiftUI
 import FirebaseAuth
 
+// Main profile screen with sections for settings, hosting, referrals, support, and legal info.
 struct ProfileView: View {
-    @AppStorage("firstName") var firstName: String = ""
+    @AppStorage("firstName") var firstName: String = "" // Persisted user name
     @State var showLogoutAlert = false
-    @State private var showFirstScreen = false
+    @State private var showFirstScreen = false // Used to navigate to the onboarding screen
 
     var body: some View {
         NavigationView {
@@ -29,6 +30,7 @@ struct ProfileView: View {
                     Divider()
                     hostingPromo
                     
+                    // Settings Section
                     ProfileSection(
                         title: "Settings",
                         items: [
@@ -42,6 +44,7 @@ struct ProfileView: View {
                         ]
                     )
                     
+                    // Hosting Section
                     ProfileSection(
                         title: "Hosting",
                         items: [
@@ -51,6 +54,7 @@ struct ProfileView: View {
                         ]
                     )
 
+                    // Referrals
                     ProfileSection(
                         title: "Referrals & Credits",
                         items: [
@@ -59,6 +63,7 @@ struct ProfileView: View {
                         ]
                     )
 
+                    // Support
                     ProfileSection(
                         title: "Support",
                         items: [
@@ -70,6 +75,7 @@ struct ProfileView: View {
                         ]
                     )
 
+                    // Legal
                     ProfileSection(
                         title: "Legal",
                         items: [
@@ -94,6 +100,7 @@ struct ProfileView: View {
 
     // MARK: - Header
 
+    // Header (Avatar + Name + Bell Icon)
     private var profileHeader: some View {
         HStack {
             Circle()
@@ -120,7 +127,7 @@ struct ProfileView: View {
     }
 
     // MARK: - Promo
-
+    // Hosting Promo Card
     private var hostingPromo: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -142,8 +149,8 @@ struct ProfileView: View {
         .padding(.horizontal)
     }
 
-    // MARK: - Logout Button
 
+    // Logout Button + Alert
     private var logoutButton: some View {
         Button("Log out") {
             showLogoutAlert = true
@@ -162,8 +169,7 @@ struct ProfileView: View {
     }
 }
 
-// MARK: - ProfileSection
-
+// Reusable Section Component
 struct ProfileSection: View {
     let title: String
     let items: [(icon: String, label: String)]

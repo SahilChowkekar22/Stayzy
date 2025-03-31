@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+// A horizontally swipable carousel view for displaying hotel images.
+// Accepts an array of image path strings and uses `AsyncImage` to load them.
 struct HotelImageCarousel: View {
+    // Image URLs or path components to load images
     let imagePaths: [String]
 
     var body: some View {
         TabView {
             ForEach(imagePaths, id: \.self) { path in
+                // Async image loader with placeholder fallback
                 AsyncImage(url: APIEndpoint.imageURL(for: path)) { image in
                     image
                         .resizable()

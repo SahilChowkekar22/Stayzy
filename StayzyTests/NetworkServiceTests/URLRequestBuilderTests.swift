@@ -10,6 +10,7 @@ import XCTest
 
 final class URLRequestBuilderTests: XCTestCase {
 
+    // Test valid init
     func test_init_withValidURL_setsUpComponents() throws {
         // GIVEN
         let urlString = "https://example.com/api"
@@ -24,6 +25,7 @@ final class URLRequestBuilderTests: XCTestCase {
 
 
 
+    // Test adding query parameters
     func test_addQueryItems_appendsCorrectParams() throws {
         // GIVEN
         let builder = try URLRequestBuilder(endpoint: "https://example.com/api")
@@ -42,6 +44,7 @@ final class URLRequestBuilderTests: XCTestCase {
         XCTAssertTrue(url.contains("key2=value2"))
     }
 
+    // Test adding headers
     func test_addHeaders_setsCorrectHTTPHeaders() throws {
         // GIVEN
         let headers = ["Authorization": "Bearer 123", "Accept": "application/json"]
@@ -56,6 +59,7 @@ final class URLRequestBuilderTests: XCTestCase {
         XCTAssertEqual(request.value(forHTTPHeaderField: "Accept"), "application/json")
     }
 
+    // Edge case: test for invalid URL scenario
     func test_build_throwsInvalidURL_ifComponentsFail() throws {
         // GIVEN a URL with no host (invalid)
         var components = URLComponents()
@@ -64,7 +68,5 @@ final class URLRequestBuilderTests: XCTestCase {
         var brokenBuilder = try URLRequestBuilder(endpoint: "https://test")
         brokenBuilder = brokenBuilder.addQueryItems([]) // override internal components
 
-        // You'd have to force the internal state invalid for this to fail
-        // but in current impl, this isn't likely to fail unless initial endpoint is bad.
     }
 }

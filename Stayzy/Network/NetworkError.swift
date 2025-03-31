@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Enum to define custom network errors
 enum NetworkError: Error, LocalizedError, Equatable {
 
     case invalidURL
@@ -16,6 +17,7 @@ enum NetworkError: Error, LocalizedError, Equatable {
     case noData
     case decodingError
 
+    // Descriptions for displaying error messages
     var errorDescription: String? {
         switch self {
         case .invalidURL:
@@ -33,6 +35,7 @@ enum NetworkError: Error, LocalizedError, Equatable {
         }
     }
 
+    // Equatable conformance to compare error cases (useful in tests)
     static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
         switch (lhs, rhs) {
         case (.invalidURL, .invalidURL):

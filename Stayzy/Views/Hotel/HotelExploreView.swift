@@ -4,6 +4,10 @@
 //
 //  Created by Sahil ChowKekar on 3/28/25.
 //
+
+
+import SwiftUI
+// A model used for navigation to the HotelDetailView with all necessary display info.
 struct SelectedHotelInfo: Identifiable {
     let id = UUID()
     let hotel: HotelElement
@@ -12,12 +16,15 @@ struct SelectedHotelInfo: Identifiable {
     let reviewCount: Int
 }
 
-import SwiftUI
-
 struct HotelExploreView: View {
-    @ObservedObject var viewModel = HotelViewModel()
+    @ObservedObject var viewModel: HotelViewModel
+
+    
+    // Navigation State
     @State private var selectedHotel: HotelElement?
     @State private var selectedHotelInfo: SelectedHotelInfo?
+    
+    
     @State private var selectedPrice: String = ""
     @State private var selectedRating: String = ""
     @State private var selectedReviewCount: Int = 0
@@ -26,7 +33,7 @@ struct HotelExploreView: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 16) {
-                    // 🔍 Search Bar
+                    // Search Bar
                     SearchBar(text: $viewModel.searchText)
                         .padding(.horizontal)
 
@@ -51,6 +58,7 @@ struct HotelExploreView: View {
                 await viewModel.loadHotels()
             }
         }
+        // Full-Screen Hotel Detail Sheet
         .fullScreenCover(item: $selectedHotelInfo) { info in
             HotelDetailView(
                 hotel: info.hotel,
@@ -64,6 +72,7 @@ struct HotelExploreView: View {
 
     // MARK: - Helper Views
 
+    // Loading State View
     private var loadingView: some View {
         ZStack {
             Color.white.opacity(0.01) // Optional: to ensure full-screen background
@@ -84,14 +93,14 @@ struct HotelExploreView: View {
     }
 
 
-
+    // Error State View
     private func errorView(_ message: String) -> some View {
         Text(message)
             .foregroundColor(.red)
             .padding()
     }
 
-
+    // No Results View
     private var noResultsView: some View {
         Text("No hotels found")
             .foregroundColor(.gray)
@@ -99,6 +108,7 @@ struct HotelExploreView: View {
             .padding(.top, 50)
     }
 
+    // Hotel List View
     private var hotelListView: some View {
         LazyVStack(spacing: 20) {
             ForEach(viewModel.filteredHotels, id: \.code) { hotel in
@@ -125,5 +135,5 @@ struct HotelExploreView: View {
     }
 }
 #Preview {
-    HotelExploreView()
+    HotelExploreView(viewModel: HotelViewModel())
 }

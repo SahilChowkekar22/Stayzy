@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+// Main inbox view showing message tabs, header icons, and an empty state placeholder.
 struct MessagesView: View {
     @State private var selectedTab: MessageTab = .all
 
@@ -20,25 +22,28 @@ struct MessagesView: View {
                 .fontWeight(.bold)
                 .padding(.horizontal)
             
-            messageTabs
+            messageTabs // Category filters (All, Traveling, Support)
 
             Spacer()
             
-            emptyStateView
+            emptyStateView // Placeholder for no messages (until backend hooked up)
 
             Spacer()
         }
     }
 }
 
+// Extension for subviews & enums
 private extension MessagesView {
     
+    // Tabs for filtering message categories
     enum MessageTab: String, CaseIterable {
         case all = "All"
         case traveling = "Traveling"
         case support = "Support"
     }
 
+    // Top Right Action Buttons (Search, Filter)
     var headerIcons: some View {
         HStack {
             Spacer()
@@ -69,6 +74,7 @@ private extension MessagesView {
         .padding(.horizontal)
     }
 
+    // Horizontal Tab Selector
     var messageTabs: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 10) {
@@ -91,6 +97,7 @@ private extension MessagesView {
         .padding(.bottom)
     }
 
+    // Empty State UI (Default when inbox is empty)
     var emptyStateView: some View {
         VStack(spacing: 12) {
             Image(systemName: "text.bubble")

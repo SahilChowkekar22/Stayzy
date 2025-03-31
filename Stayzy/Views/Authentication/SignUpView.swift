@@ -9,27 +9,31 @@ import SwiftUI
 import FirebaseAuth
 
 struct SignUpView: View {
-//    @State private var username = ""
+    // User Input State
     @State private var email = ""
     @State private var password = ""
     
-    @State private var usernameError = ""
+    // Error Messages
+    @State private var usernameError = ""  // Placeholder if you re-enable username later
     @State private var emailError = ""
     @State private var passwordError = ""
+    
+    // Navigation Trigger
     @State private var shouldNavigate = false
 
-    
+    // Email Validation Logic
     var isEmailValid: Bool {
         let emailRegex = #"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
     }
     
-    // Password validation: 8+ characters, 1 uppercase, 1 lowercase, 1 number, 1 special char
+    // Password Validation Logic
     var isPasswordValid: Bool {
         let passwordRegex = #"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"#
         return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
     }
     
+    // Field Validation
     func validateFields() {
         emailError = isEmailValid ? "" : "Invalid email format."
         passwordError = isPasswordValid ? "" : "Password must be at least 8 characters long, contain 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character."
@@ -38,13 +42,12 @@ struct SignUpView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
             
+            // MARK: - Header
             Text("Let’s Get Started!")
                 .font(.system(size: 30))
-                .foregroundColor(
-                    Color("RedColor")
-                )
+                .foregroundColor(Color("RedColor"))
                 .bold()
-                .frame(maxWidth: .infinity)  // Aligns text to the left
+                .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
                 .padding(.leading, 10)
                 .padding(.top, 50)
@@ -53,14 +56,10 @@ struct SignUpView: View {
                 .font(.system(size: 20))
                 .foregroundColor(Color("RedColor"))
                 .multilineTextAlignment(.center)
-                .lineLimit(nil)
-                .fixedSize(horizontal: false, vertical: true)
-                .multilineTextAlignment(.center)
                 .padding(.horizontal, 30)
                 .padding(.bottom, 50)
             
-
-            
+            // Email Field
             VStack(alignment: .leading, spacing: 5) {
                 TextField("Email", text: $email)
                     .autocapitalization(.none)
@@ -72,6 +71,7 @@ struct SignUpView: View {
                     }
                     .padding(.horizontal, 30)
                 
+                // Inline Error
                 if !emailError.isEmpty {
                     Text(emailError)
                         .font(.caption)
@@ -80,6 +80,7 @@ struct SignUpView: View {
                 }
             }.padding(.bottom, 30)
             
+            //  Password Field
             VStack(alignment: .leading, spacing: 5) {
                 SecureField("Password", text: $password)
                     .padding(.vertical, 10)
@@ -89,6 +90,7 @@ struct SignUpView: View {
                     }
                     .padding(.horizontal, 30)
                 
+                // Inline Error
                 if !passwordError.isEmpty {
                     Text(passwordError)
                         .font(.caption)
@@ -97,13 +99,15 @@ struct SignUpView: View {
                 }
             }.padding(.bottom, 20)
             
+            // Sign Up Button
             Button {
                 validateFields()
                 
-//                if usernameError.isEmpty && emailError.isEmpty && passwordError.isEmpty
+                // Only proceed if no validation errors
                 if emailError.isEmpty && passwordError.isEmpty {
                     let formattedEmail = email.lowercased()
                     
+                    // Firebase Sign-Up Logic
                     Auth.auth().createUser(withEmail: formattedEmail, password: password) { authResult, error in
                         if let error = error {
                             DispatchQueue.main.async {
@@ -124,16 +128,14 @@ struct SignUpView: View {
                 Text("Sign Up")
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(
-                        Color("RedColor")
-                    )
-                        
-                    
+                    .background(Color("RedColor"))
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding(.horizontal, 50)
                     .padding(.top, 25)
             }
+            
+            // Navigation Link to Profile Setup
             NavigationLink(
                 destination: ProfileInfoView(),
                 isActive: $shouldNavigate,
@@ -141,6 +143,7 @@ struct SignUpView: View {
             )
             .hidden()
             
+            // Divider with OR
             HStack {
                 Rectangle()
                     .frame(height: 1)
@@ -157,9 +160,9 @@ struct SignUpView: View {
             }
             .padding(.bottom, 25)
             
+            // Social Media Placeholder Icons
             Text("Social Media Login")
-                .foregroundColor(
-                    Color("RedColor"))
+                .foregroundColor(Color("RedColor"))
             
             HStack(spacing: 40) {
                 Image("Google")
@@ -182,30 +185,27 @@ struct SignUpView: View {
             }
             .padding(.bottom, 20)
             
+            // Already Have an Account?
             HStack {
                 Text("Already have an account?")
-                    .foregroundColor(
-                        Color("RedColor"))
+                    .foregroundColor(Color("RedColor"))
                 
                 NavigationLink(destination: SignInView()) {
                     Text("Sign in")
                         .bold()
-                        .foregroundColor(
-                            Color("RedColor"))
+                        .foregroundColor(Color("RedColor"))
                 }
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 40)
             
             Spacer()
-            
-
         }
         .padding()
     }
 }
 
-
+// Preview
 #Preview {
     NavigationStack {
         SignUpView()

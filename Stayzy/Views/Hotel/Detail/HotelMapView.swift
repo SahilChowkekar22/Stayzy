@@ -8,11 +8,15 @@
 import SwiftUI
 import MapKit
 
+// Compact map view that shows hotel location with option to expand into full-screen map.
 struct HotelMapView: View {
     let coordinate: CLLocationCoordinate2D
+    
+    // State
     @State private var showFullMap = false
     @State private var cameraPosition: MapCameraPosition
 
+    // Init with custom camera region
     init(coordinate: CLLocationCoordinate2D) {
         self.coordinate = coordinate
         _cameraPosition = State(initialValue:
@@ -25,9 +29,11 @@ struct HotelMapView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
+            //Section Title
             Text("Where you'll be staying")
                 .font(.headline)
 
+            // Map with Pin and Expand Button
             ZStack(alignment: .topTrailing) {
                 Map(position: $cameraPosition) {
                     Annotation("Hotel Location", coordinate: coordinate) {
@@ -41,11 +47,13 @@ struct HotelMapView: View {
             }
         }
         .padding(.horizontal)
+        // Full Screen Map Sheet
         .sheet(isPresented: $showFullMap) {
             FullMapView(coordinate: coordinate)
         }
     }
 
+    // Expand Map Button
     private var expandButton: some View {
         Button {
             showFullMap = true

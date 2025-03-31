@@ -10,6 +10,7 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
   - Social Media Login (Google, Facebook, Apple)
   - Secure authentication flow
   - Password recovery
+  - Session management
 
 - **Hotel Search & Booking**
   - Advanced hotel search with filters
@@ -19,6 +20,7 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
   - Price comparison
   - Location-based search
   - Map integration
+  - Hotel reviews and ratings
 
 - **User Profile Management**
   - Personal information management
@@ -27,6 +29,7 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
   - Wishlist functionality
   - Profile customization
   - Notification settings
+  - Payment methods management
 
 - **Trip Management**
   - View upcoming trips
@@ -35,18 +38,74 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
   - Trip sharing
   - Trip reminders
   - Digital boarding pass
+  - Trip cancellation
 
 ## 🛠 Technical Stack
 
+### Core Technologies
 - **Framework**: SwiftUI
+- **Language**: Swift 5.5+
 - **Architecture**: MVVM (Model-View-ViewModel)
-- **Language**: Swift
-- **Database**: CoreData
+- **iOS Target**: iOS 15.0+
+
+### Backend & Data
 - **Authentication**: Firebase Auth
-- **Testing**: XCTest, SwiftUI Preview
-- **Local Storage**: CoreData
-- **Network Layer**: Custom implementation
-- **UI Components**: Custom SwiftUI components
+  - Email/Password authentication
+  - Social media sign-in (Google, Facebook, Apple)
+  - Secure session management
+- **Database**: 
+  - CoreData for local storage
+  - Firebase Firestore for cloud data
+- **File Storage**: Firebase Storage
+- **Analytics**: Firebase Analytics
+
+### UI/UX
+- **UI Framework**: SwiftUI
+- **Custom Components**: 
+  - Custom search bar
+  - Rating components
+  - Hotel cards
+  - Booking forms
+- **Design System**:
+  - Custom color scheme
+  - Typography system
+  - Component library
+
+### Networking
+- **API Layer**: Custom implementation
+  - RESTful API integration
+  - JSON parsing
+  - Error handling
+  - Request/Response caching
+- **Maps Integration**: Google Maps SDK
+- **Image Loading**: Async image loading with caching
+
+### Development Tools
+- **Version Control**: Git
+- **Dependency Management**: Swift Package Manager
+- **Testing**:
+  - XCTest for unit testing
+  - SwiftUI Preview for UI testing
+  - UI tests for critical flows
+- **Code Quality**:
+  - SwiftLint for code style
+  - SwiftFormat for formatting
+  - Code coverage tracking
+
+### Performance & Optimization
+- **Caching**: 
+  - CoreData for local data
+  - Image caching
+  - API response caching
+- **Memory Management**: ARC
+- **Background Processing**: Background tasks and fetch
+
+### Security
+- **Authentication**: Firebase Auth
+- **Data Encryption**: 
+  - Secure storage for sensitive data
+  - HTTPS for network calls
+- **Input Validation**: Custom validation rules
 
 ## 📱 Screenshots
 
@@ -65,25 +124,31 @@ cd Stayzy
 open Stayzy.xcodeproj
 ```
 
-3. Install dependencies (if any)
+3. Install dependencies
 ```bash
-pod install
+# Using Swift Package Manager
+# Dependencies are automatically managed by Xcode
 ```
 
 4. Set up Firebase
    - Add your `GoogleService-Info.plist` to the project
    - Configure Firebase in your project settings
+   - Enable required Firebase services (Auth, Firestore, etc.)
 
-5. Build and run the project
+5. Configure CoreData
+   - Ensure `LocalStorage.xcdatamodeld` is properly set up
+   - Run initial migration if needed
+
+6. Build and run the project
 
 ## 📋 Requirements
 
 - iOS 15.0+
 - Xcode 13.0+
 - Swift 5.5+
-- CocoaPods (if using)
 - Firebase account
 - Google Maps API key (for map features)
+- CoreData setup
 
 ## 🏗 Project Structure
 
@@ -112,6 +177,8 @@ Stayzy/
 │   └── API communication layer
 ├── CoreData/
 │   └── Local database configuration
+├── Repository/
+│   └── Data access layer
 ├── Utils/
 │   └── Helper functions and extensions
 └── Resources/
@@ -139,3 +206,6 @@ xcodebuild test -scheme Stayzy -destination 'platform=iOS Simulator,name=iPhone 
 - UI components
 - Network layer
 - CoreData operations
+- Repository layer
+- ViewModel logic
+
