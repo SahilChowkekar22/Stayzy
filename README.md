@@ -109,98 +109,71 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 
 ## 📱 Screenshots
 
-### Authentication Flow
-<table style="border: none;">
-<tr>
-<td style="border: none;">
-<img src="Stayzy/Images/FirstScreen.png" width="250" height="500" alt="First Screen">
-<p align="center">Welcome Screen</p>
-<p align="center">App introduction and login options</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/Login.png" width="250" height="500" alt="Sign In">
-<p align="center">Sign In Screen</p>
-<p align="center">Email/Password login with social options</p>
-</td>
-</tr>
-<tr>
-<td style="border: none;">
-<img src="Stayzy/Images/SignUp.png" width="250" height="500" alt="Sign Up">
-<p align="center">Sign Up Screen</p>
-<p align="center">New user registration with validation</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/ProfileInfo.png" width="250" height="500" alt="Profile Info">
-<p align="center">Profile Information</p>
-<p align="center">Edit personal details</p>
-</td>
-</tr>
-</table>
+## 🔐 Authentication Flow
 
-### Main Features
-<table style="border: none;">
-<tr>
-<td style="border: none;">
-<img src="Stayzy/Images/Explore.png" width="250" height="500" alt="Explore">
-<p align="center">Explore Screen</p>
-<p align="center">Browse hotels with filters and search</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/HotelDetail.png" width="250" height="500" alt="Hotel Details">
-<p align="center">Hotel Details</p>
-<p align="center">Comprehensive hotel information</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/HotelDescription.png" width="250" height="500" alt="Hotel Description">
-<p align="center">Hotel Description</p>
-<p align="center">Detailed amenities and facilities</p>
-</td>
-</tr>
-</table>
+**Welcome Screen**  
+_App introduction and login options_  
+![Welcome Screen](Stayzy/Images/FirstScreen.png)
 
-### Maps & Location
-<table style="border: none;">
-<tr>
-<td style="border: none;">
-<img src="Stayzy/Images/Map.png" width="250" height="500" alt="Map View">
-<p align="center">Map View</p>
-<p align="center">Interactive hotel location map</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/FullMap.png" width="250" height="500" alt="Full Map">
-<p align="center">Full Map View</p>
-<p align="center">Expanded map with all nearby hotels</p>
-</td>
-</tr>
-</table>
+**Sign In Screen**  
+_Email/Password login with social options_  
+![Sign In](Stayzy/Images/Login.png)
 
-### User Profile & Trips
-<table style="border: none;">
-<tr>
-<td style="border: none;">
-<img src="Stayzy/Images/profile.png" width="250" height="500" alt="Profile">
-<p align="center">Profile Screen</p>
-<p align="center">User profile and settings</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/Trips.png" width="250" height="500" alt="Trips">
-<p align="center">Trips Screen</p>
-<p align="center">View and manage bookings</p>
-</td>
-</tr>
-<tr>
-<td style="border: none;">
-<img src="Stayzy/Images/Wishlists.png" width="250" height="500" alt="Wishlists">
-<p align="center">Wishlists</p>
-<p align="center">Saved hotels and favorites</p>
-</td>
-<td style="border: none;">
-<img src="Stayzy/Images/Messages.png" width="250" height="500" alt="Messages">
-<p align="center">Messages</p>
-<p align="center">Booking notifications and support</p>
-</td>
-</tr>
-</table>
+**Sign Up Screen**  
+_New user registration with validation_  
+![Sign Up](Stayzy/Images/SignUp.png)
+
+**Profile Information**  
+_Edit personal details_  
+![Profile Info](Stayzy/Images/ProfileInfo.png)
+
+---
+
+## ✨ Main Features
+
+**Explore Screen**  
+_Browse hotels with filters and search_  
+![Explore](Stayzy/Images/Explore.png)
+
+**Hotel Details**  
+_Comprehensive hotel information_  
+![Hotel Details](Stayzy/Images/HotelDetail.png)
+
+**Hotel Description**  
+_Detailed amenities and facilities_  
+![Hotel Description](Stayzy/Images/HotelDescription.png)
+
+---
+
+## 🗺️ Maps & Location
+
+**Map View**  
+_Interactive hotel location map_  
+![Map View](Stayzy/Images/Map.png)
+
+**Full Map View**  
+_Expanded map with all nearby hotels_  
+![Full Map](Stayzy/Images/FullMap.png)
+
+---
+
+## 👤 User Profile & Trips
+
+**Profile Screen**  
+_User profile and settings_  
+![Profile](Stayzy/Images/profile.png)
+
+**Trips Screen**  
+_View and manage bookings_  
+![Trips](Stayzy/Images/Trips.png)
+
+**Wishlists**  
+_Saved hotels and favorites_  
+![Wishlists](Stayzy/Images/Wishlists.png)
+
+**Messages**  
+_Booking notifications and support_  
+![Messages](Stayzy/Images/Messages.png)
 
 ## 🔧 Installation
 
