@@ -110,25 +110,25 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 ## 📱 Screenshots
 
 ### Authentication Flow
-![Sign In](Stayzy/Images/Login.png)
-![Sign Up](Stayzy/Images/SignUp.png)
-![First Screen](Stayzy/Images/FirstScreen.png)
+<img src="Stayzy/Images/Login.png" width="300" height="600" alt="Sign In">
+<img src="Stayzy/Images/SignUp.png" width="300" height="600" alt="Sign Up">
+<img src="Stayzy/Images/FirstScreen.png" width="300" height="600" alt="First Screen">
 
 ### Main Features
-![Explore](Stayzy/Images/Explore.png)
-![Hotel Details](Stayzy/Images/HotelDetail.png)
-![Hotel Description](Stayzy/Images/HotelDescription.png)
+<img src="Stayzy/Images/Explore.png" width="300" height="600" alt="Explore">
+<img src="Stayzy/Images/HotelDetail.png" width="300" height="600" alt="Hotel Details">
+<img src="Stayzy/Images/HotelDescription.png" width="300" height="600" alt="Hotel Description">
 
 ### Maps & Location
-![Map View](Stayzy/Images/Map.png)
-![Full Map](Stayzy/Images/FullMap.png)
+<img src="Stayzy/Images/Map.png" width="300" height="600" alt="Map View">
+<img src="Stayzy/Images/FullMap.png" width="300" height="600" alt="Full Map">
 
 ### User Profile & Trips
-![Profile](Stayzy/Images/profile.png)
-![Profile Info](Stayzy/Images/ProfileInfo.png)
-![Trips](Stayzy/Images/Trips.png)
-![Wishlists](Stayzy/Images/Wishlists.png)
-![Messages](Stayzy/Images/Messages.png)
+<img src="Stayzy/Images/profile.png" width="300" height="600" alt="Profile">
+<img src="Stayzy/Images/ProfileInfo.png" width="300" height="600" alt="Profile Info">
+<img src="Stayzy/Images/Trips.png" width="300" height="600" alt="Trips">
+<img src="Stayzy/Images/Wishlists.png" width="300" height="600" alt="Wishlists">
+<img src="Stayzy/Images/Messages.png" width="300" height="600" alt="Messages">
 
 ## 🔧 Installation
 
