@@ -110,25 +110,43 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 ## 📱 Screenshots
 
 ### Authentication Flow
-<img src="Stayzy/Images/Login.png" width="300" height="600" alt="Sign In">
-<img src="Stayzy/Images/SignUp.png" width="300" height="600" alt="Sign Up">
-<img src="Stayzy/Images/FirstScreen.png" width="300" height="600" alt="First Screen">
+<table>
+<tr>
+<td><img src="Stayzy/Images/Login.png" width="250" height="500" alt="Sign In"></td>
+<td><img src="Stayzy/Images/SignUp.png" width="250" height="500" alt="Sign Up"></td>
+<td><img src="Stayzy/Images/FirstScreen.png" width="250" height="500" alt="First Screen"></td>
+</tr>
+</table>
 
 ### Main Features
-<img src="Stayzy/Images/Explore.png" width="300" height="600" alt="Explore">
-<img src="Stayzy/Images/HotelDetail.png" width="300" height="600" alt="Hotel Details">
-<img src="Stayzy/Images/HotelDescription.png" width="300" height="600" alt="Hotel Description">
+<table>
+<tr>
+<td><img src="Stayzy/Images/Explore.png" width="250" height="500" alt="Explore"></td>
+<td><img src="Stayzy/Images/HotelDetail.png" width="250" height="500" alt="Hotel Details"></td>
+<td><img src="Stayzy/Images/HotelDescription.png" width="250" height="500" alt="Hotel Description"></td>
+</tr>
+</table>
 
 ### Maps & Location
-<img src="Stayzy/Images/Map.png" width="300" height="600" alt="Map View">
-<img src="Stayzy/Images/FullMap.png" width="300" height="600" alt="Full Map">
+<table>
+<tr>
+<td><img src="Stayzy/Images/Map.png" width="250" height="500" alt="Map View"></td>
+<td><img src="Stayzy/Images/FullMap.png" width="250" height="500" alt="Full Map"></td>
+</tr>
+</table>
 
 ### User Profile & Trips
-<img src="Stayzy/Images/profile.png" width="300" height="600" alt="Profile">
-<img src="Stayzy/Images/ProfileInfo.png" width="300" height="600" alt="Profile Info">
-<img src="Stayzy/Images/Trips.png" width="300" height="600" alt="Trips">
-<img src="Stayzy/Images/Wishlists.png" width="300" height="600" alt="Wishlists">
-<img src="Stayzy/Images/Messages.png" width="300" height="600" alt="Messages">
+<table>
+<tr>
+<td><img src="Stayzy/Images/profile.png" width="250" height="500" alt="Profile"></td>
+<td><img src="Stayzy/Images/ProfileInfo.png" width="250" height="500" alt="Profile Info"></td>
+<td><img src="Stayzy/Images/Trips.png" width="250" height="500" alt="Trips"></td>
+</tr>
+<tr>
+<td><img src="Stayzy/Images/Wishlists.png" width="250" height="500" alt="Wishlists"></td>
+<td><img src="Stayzy/Images/Messages.png" width="250" height="500" alt="Messages"></td>
+</tr>
+</table>
 
 ## 🔧 Installation
 
