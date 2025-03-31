@@ -112,39 +112,91 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 ### Authentication Flow
 <table>
 <tr>
-<td><img src="Stayzy/Images/Login.png" width="250" height="500" alt="Sign In"></td>
-<td><img src="Stayzy/Images/SignUp.png" width="250" height="500" alt="Sign Up"></td>
-<td><img src="Stayzy/Images/FirstScreen.png" width="250" height="500" alt="First Screen"></td>
+<td>
+<img src="Stayzy/Images/Login.png" width="250" height="500" alt="Sign In">
+<p align="center">Sign In Screen</p>
+<p align="center">Email/Password login with social options</p>
+</td>
+<td>
+<img src="Stayzy/Images/SignUp.png" width="250" height="500" alt="Sign Up">
+<p align="center">Sign Up Screen</p>
+<p align="center">New user registration with validation</p>
+</td>
+<td>
+<img src="Stayzy/Images/FirstScreen.png" width="250" height="500" alt="First Screen">
+<p align="center">Welcome Screen</p>
+<p align="center">App introduction and login options</p>
+</td>
 </tr>
 </table>
 
 ### Main Features
 <table>
 <tr>
-<td><img src="Stayzy/Images/Explore.png" width="250" height="500" alt="Explore"></td>
-<td><img src="Stayzy/Images/HotelDetail.png" width="250" height="500" alt="Hotel Details"></td>
-<td><img src="Stayzy/Images/HotelDescription.png" width="250" height="500" alt="Hotel Description"></td>
+<td>
+<img src="Stayzy/Images/Explore.png" width="250" height="500" alt="Explore">
+<p align="center">Explore Screen</p>
+<p align="center">Browse hotels with filters and search</p>
+</td>
+<td>
+<img src="Stayzy/Images/HotelDetail.png" width="250" height="500" alt="Hotel Details">
+<p align="center">Hotel Details</p>
+<p align="center">Comprehensive hotel information</p>
+</td>
+<td>
+<img src="Stayzy/Images/HotelDescription.png" width="250" height="500" alt="Hotel Description">
+<p align="center">Hotel Description</p>
+<p align="center">Detailed amenities and facilities</p>
+</td>
 </tr>
 </table>
 
 ### Maps & Location
 <table>
 <tr>
-<td><img src="Stayzy/Images/Map.png" width="250" height="500" alt="Map View"></td>
-<td><img src="Stayzy/Images/FullMap.png" width="250" height="500" alt="Full Map"></td>
+<td>
+<img src="Stayzy/Images/Map.png" width="250" height="500" alt="Map View">
+<p align="center">Map View</p>
+<p align="center">Interactive hotel location map</p>
+</td>
+<td>
+<img src="Stayzy/Images/FullMap.png" width="250" height="500" alt="Full Map">
+<p align="center">Full Map View</p>
+<p align="center">Expanded map with all nearby hotels</p>
+</td>
 </tr>
 </table>
 
 ### User Profile & Trips
 <table>
 <tr>
-<td><img src="Stayzy/Images/profile.png" width="250" height="500" alt="Profile"></td>
-<td><img src="Stayzy/Images/ProfileInfo.png" width="250" height="500" alt="Profile Info"></td>
-<td><img src="Stayzy/Images/Trips.png" width="250" height="500" alt="Trips"></td>
+<td>
+<img src="Stayzy/Images/profile.png" width="250" height="500" alt="Profile">
+<p align="center">Profile Screen</p>
+<p align="center">User profile and settings</p>
+</td>
+<td>
+<img src="Stayzy/Images/ProfileInfo.png" width="250" height="500" alt="Profile Info">
+<p align="center">Profile Information</p>
+<p align="center">Edit personal details</p>
+</td>
+<td>
+<img src="Stayzy/Images/Trips.png" width="250" height="500" alt="Trips">
+<p align="center">Trips Screen</p>
+<p align="center">View and manage bookings</p>
+</td>
 </tr>
 <tr>
-<td><img src="Stayzy/Images/Wishlists.png" width="250" height="500" alt="Wishlists"></td>
-<td><img src="Stayzy/Images/Messages.png" width="250" height="500" alt="Messages"></td>
+<td>
+<img src="Stayzy/Images/Wishlists.png" width="250" height="500" alt="Wishlists">
+<p align="center">Wishlists</p>
+<p align="center">Saved hotels and favorites</p>
+</td>
+<td>
+<img src="Stayzy/Images/Messages.png" width="250" height="500" alt="Messages">
+<p align="center">Messages</p>
+<p align="center">Booking notifications and support</p>
+</td>
 </tr>
 </table>
 
