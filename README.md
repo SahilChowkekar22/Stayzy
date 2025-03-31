@@ -147,26 +147,3 @@ xcodebuild test -scheme Stayzy -destination 'platform=iOS Simulator,name=iPhone 
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-
-- Your Name - Initial work
-
-## 🙏 Acknowledgments
-
-- [Firebase](https://firebase.google.com/)
-- [SwiftUI](https://developer.apple.com/xcode/swiftui/)
-- [CoreData](https://developer.apple.com/documentation/coredata)
-- [Google Maps](https://developers.google.com/maps)
-
-## 📞 Support
-
-For support, email support@stayzy.com or join our Slack channel.
-
----
-
-Made with ❤️ by [Your Name] 
