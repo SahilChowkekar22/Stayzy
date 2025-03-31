@@ -110,19 +110,25 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 ## 📱 Screenshots
 
 ### Authentication Flow
-![Sign In](Stayzy/Assets.xcassets/Images/SignIn.imageset/SignIn.png)
-![Sign Up](Stayzy/Assets.xcassets/Images/SignUp.imageset/SignUp.png)
-![First Screen](Stayzy/Assets.xcassets/Images/FirstScreen.imageset/FirstScreen.png)
+![Sign In](Stayzy/Images/Login.png)
+![Sign Up](Stayzy/Images/SignUp.png)
+![First Screen](Stayzy/Images/FirstScreen.png)
 
 ### Main Features
-![Home Screen](Stayzy/Assets.xcassets/Images/HomeScreen.imageset/HomeScreen.png)
-![Hotel Details](Stayzy/Assets.xcassets/Images/HotelDetails.imageset/HotelDetails.png)
-![Booking Screen](Stayzy/Assets.xcassets/Images/BookingScreen.imageset/BookingScreen.png)
+![Explore](Stayzy/Images/Explore.png)
+![Hotel Details](Stayzy/Images/HotelDetail.png)
+![Hotel Description](Stayzy/Images/HotelDescription.png)
+
+### Maps & Location
+![Map View](Stayzy/Images/Map.png)
+![Full Map](Stayzy/Images/FullMap.png)
 
 ### User Profile & Trips
-![Profile](Stayzy/Assets.xcassets/Images/Profile.imageset/Profile.png)
-![Trips](Stayzy/Assets.xcassets/Images/Trips.imageset/Trips.png)
-![Trip Details](Stayzy/Assets.xcassets/Images/TripDetails.imageset/TripDetails.png)
+![Profile](Stayzy/Images/profile.png)
+![Profile Info](Stayzy/Images/ProfileInfo.png)
+![Trips](Stayzy/Images/Trips.png)
+![Wishlists](Stayzy/Images/Wishlists.png)
+![Messages](Stayzy/Images/Messages.png)
 
 ## 🔧 Installation
 
