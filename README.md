@@ -113,7 +113,7 @@ Stayzy is a modern iOS application that helps users find and book hotels with ea
 <table style="border: none;">
 <tr>
 <td style="border: none;">
-**Welcome Screen**  
+Welcome Screen  
 _App introduction and login options_  
 <img src="Stayzy/Images/FirstScreen.png" width="200" height="400" alt="Welcome Screen">
 </td>
